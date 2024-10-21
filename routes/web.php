@@ -7,7 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user',[TaskUserController::class, 'index']);
+Route::get('/store-user',[TaskUserController::class, 'index'])->name('store-user');
+
+Route::get('/users',[TaskUserController::class, 'show']);
 
 Route::get('/user/{id}',[TaskUserController::class, 'get']);
 
